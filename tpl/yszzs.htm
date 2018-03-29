@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+
+<title>{$siteConfig.sitename}_{$siteConfig.sitetitle}</title>
+<meta name="keywords" content="{$siteConfig.sitekey}" />
+<meta name="description" content="{$siteConfig.sitedesc}" />
+
+<link rel="stylesheet" href="{$path}/themes/0002/css/swiper.min.css">
+<script src="{$path}/themes/0002/js/jquery-1.8.3.min.js"></script>
+<script src="{$path}/themes/0002/js/swiper.min.js"></script>
+<link rel="stylesheet" href="{$path}/themes/0002/css/about.css">
+<style>
+	.xzh_yszz_list_a{
+		display: block;
+		width: 100%;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		color: #ffbc00;
+	}
+</style>
+</head>
+<body>
+	<div class="contop">
+		<div class="conlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="conmenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		</div>
+
+		<div class="casecon">
+			<div class="casetit">
+				<h3>MOVIE</h3>
+				<h3>ACHIEVE BEYOND YOUR EXPECTATIONS</h3>
+				<h3>超越预期 做到你想不到</h3>
+			</div>
+			<div class="caselist">
+				<div class="typename">
+					<a href='{$path}{insert name="categorys" categoryid="18"  key="url" langth="false" nb2br="false"}'>全部案例</a>
+					<select id="menulist">
+						<option value='{$path}{insert name="categorys" categoryid="18"  key="url" langth="false" nb2br="false"}'>案例分类</option>
+						<option {if $categoryid==18&&$typeid=="5"}selected{/if} value='{$path}{insert name="types" typeid="5"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="5"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="6"}selected{/if} value='{$path}{insert name="types" typeid="6"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="6"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="17"}selected{/if} value='{$path}{insert name="types" typeid="17"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="17"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="18"}selected{/if} value='{$path}{insert name="types" typeid="18"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="18"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="19"}selected{/if} value='{$path}{insert name="types" typeid="19"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="19"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="20"}selected{/if} value='{$path}{insert name="types" typeid="20"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="20"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="21"}selected{/if} value='{$path}{insert name="types" typeid="21"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="21"  key="name" langth="false" nb2br="false"}</option>
+						<option {if $categoryid==18&&$typeid=="22"}selected{/if} value='{$path}{insert name="types" typeid="22"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="22"  key="name" langth="false" nb2br="false"}</option>
+						
+					</select>
+					<script type="text/javascript">
+						$(function(){
+							$("#menulist").change(function(){
+				                newv=$(this).find("option:selected").val();
+				                if($.trim(newv)=='0')
+				                return false;
+				                // window.open(newv);
+				                window.location.href=newv;
+				              });
+						});
+					</script>
+					<!-- <ul class="abouttit">
+						<li {if $categoryid==18&&$typeid==""}class="active"{/if}><a href='{$path}{insert name="categorys" categoryid="18"  key="url" langth="false" nb2br="false"}'>全部</a></li>
+						<li {if $categoryid==18&&$typeid=="5"}class="active"{/if}><a href='{$path}{insert name="types" typeid="5"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="5"  key="name" langth="false" nb2br="false"}</a></li>
+						<li {if $categoryid==18&&$typeid=="6"}class="active"{/if}><a href='{$path}{insert name="types" typeid="6"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="6"  key="name" langth="false" nb2br="false"}</a></li>
+					</ul> -->
+				</div>
+				<style type="text/css">
+					.caselistimg{width:80%;margin:0px auto;margin-top: 20px;}
+					.swiper2 .swiper-slide ul{width: 100%;overflow: hidden;}
+					.swiper2 .swiper-slide ul li{width: 25%;float: left;}
+					.swiper2 .swiper-slide ul li img{width: 100%;}
+				</style>
+				<div class="caselistimg">
+					<div class="swiper-container swiper2">
+				        <div class="swiper-wrapper">
+
+
+				            <div class="swiper-slide">
+				            	<ul>
+				            	 <?php $num=0;?>
+				            	 {foreach item=content from=$list}
+				            	 <?php 
+				            	 	$num++;
+				            	 	if($num%12==0){
+				            	 ?>
+				            	 </ul>
+				            </div>
+				            <div class="swiper-slide">
+				            	<ul>
+				            	 <?php	
+				            	 	}
+				            	 ?>
+				            		<li>
+				            			<a href="{$path}{$content.url}"><img src="{$path}{$content.thumb}"></a>
+				            			<a href="{$path}{$content.url}" class="xzh_yszz_list_a">{$content.title}</a>
+				            		</li>
+				            		{/foreach} 
+
+				            	</ul>
+				            </div>
+
+<!-- 
+				            <div class="swiper-slide">Slide 2</div>
+				            <div class="swiper-slide">Slide 3</div>
+				            <div class="swiper-slide">Slide 4</div> -->
+				        </div>
+				    </div>
+				    <div class="swiper-pagination"></div>
+				    <style type="text/css">
+				    	.swiper-pagination{margin: 10px auto 0px;position: static;}
+				    	.swiper-pagination-bullet{display: inline-block;width: 30px;height:4px;border-radius: 0px;border:1px solid #fabd00;margin-right: 5px;}
+				    	.swiper-pagination-bullet-active{background:#fabd00;}
+				    </style>
+				    <script>
+				    var swiper = new Swiper('.swiper2', {
+				        pagination: '.swiper-pagination',
+				        paginationClickable: true,
+				        nextButton: '.swiper-button-next',
+				        prevButton: '.swiper-button-prev',
+				        autoHeight: true, //enable auto height
+				    });
+
+				    len=$(".swiper-pagination-bullet").length;
+				    if(len==1){
+				    	$(".swiper-pagination-bullet").css("display","none");
+				    }
+				    </script>
+				</div>
+			</div>
+		</div>
+		<div class="concopy">
+			<img src="images/ewm.png">
+			<div class="copy">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				<p>B2-20110002  备案号：黔ICP备10200906号 CopyRight @ 2008-2017</p>
+				<p>贵州紫翼泓影视传媒有限公司. All Rights Reserved</p>
+			</div>
+			
+		</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{$siteConfig.sitename}_{$siteConfig.sitetitle}</title>
+<meta name="keywords" content="{$siteConfig.sitekey}" />
+<meta name="description" content="{$siteConfig.sitedesc}" />
+<link rel="stylesheet" href="{$path}/themes/0002/css/swiper.min.css">
+<script src="{$path}/themes/0002/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="{$path}/themes/0002/css/about.css">
+</head>
+<body>
+	<div class="contop">
+		<div class="conlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="conmenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		</div>
+		<style type="text/css">
+			.abouttext *{color:#fff;}
+		</style>
+		<div class="aboutcon">
+			<ul class="abouttit">
+				<li {if $categoryid==22&&$typeid==""}class="active"{/if}><a href='{$path}{insert name="categorys" categoryid="22"  key="url" langth="false" nb2br="false"}'>全部</a></li>
+				<li {if $categoryid==22&&$typeid=="25"}class="active"{/if}><a href='{$path}{insert name="types" typeid="25"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="25"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==22&&$typeid=="26"}class="active"{/if}><a href='{$path}{insert name="types" typeid="26"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="26"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==22&&$typeid=="27"}class="active"{/if}><a href='{$path}{insert name="types" typeid="27"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="27"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==22&&$typeid=="28"}class="active"{/if}><a href='{$path}{insert name="types" typeid="28"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="28"  key="name" langth="false" nb2br="false"}</a></li>
+			</ul>
+			<div class="abouttext">
+				{$content}
+			</div>
+		</div>
+		<div class="concopy">
+			<img src="{$path}/themes/0002/images/ewm.png">
+			<div class="copy">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{$siteConfig.sitename}_{$siteConfig.sitetitle}</title>
+<meta name="keywords" content="{$siteConfig.sitekey}" />
+<meta name="description" content="{$siteConfig.sitedesc}" />
+<link rel="stylesheet" href="{$path}/themes/0002/css/swiper.min.css">
+<script src="{$path}/themes/0002/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="{$path}/themes/0002/css/about.css">
+<style type="text/css">
+	.list2 ul{width: 1100px;overflow: hidden;margin: 0px auto;}
+	.list2 ul li{width: calc(100%/4 - 15px);height:173px;float: left;margin-right: 20px;margin-top: 20px;}
+	.list2 ul li:nth-child(4n){margin-right: 0px;}
+	.list2 ul li a{display: block;position: relative;height: 173px;overflow:hidden;}
+	.list2 ul li a img{width: 100%;}
+	.list2 ul li a .page3tit{height:40px;background: rgba(0,0,0,0.6);position: absolute;bottom: 0px;left: 0px;width: 100%;}
+	.list2 ul li a .page3tit h3{line-height: 40px;color:#fff;text-align: center;font-size: 16px;font-weight: normal;width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+</style>
+</head>
+<body>
+	<div class="contop">
+		<div class="conlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="conmenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		</div>
+		<style type="text/css">
+			.abouttext *{color:#fff;}
+		</style>
+		<div class="aboutcon">
+			<ul class="abouttit">
+				<li {if $categoryid==21&&$typeid==""}class="active"{/if}><a href='{$path}{insert name="categorys" categoryid="21"  key="url" langth="false" nb2br="false"}'>全部</a></li>
+				<li {if $categoryid==21&&$typeid=="11"}class="active"{/if}><a href='{$path}{insert name="types" typeid="11"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="11"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==21&&$typeid=="12"}class="active"{/if}><a href='{$path}{insert name="types" typeid="12"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="12"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==21&&$typeid=="13"}class="active"{/if}><a href='{$path}{insert name="types" typeid="13"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="13"  key="name" langth="false" nb2br="false"}</a></li>
+				<li {if $categoryid==21&&$typeid=="23"}class="active"{/if}><a href='{$path}{insert name="types" typeid="23"  key="url" langth="false" nb2br="false"}'>{insert name="types" typeid="23"  key="name" langth="false" nb2br="false"}</a></li>
+			</ul>
+			<div class="list2">
+				<ul>
+					{foreach item=content from=$list}
+					<li>
+						<a href="{$path}{$content.url}">
+							<img src="{$path}{$content.thumb}" style="width: 100%;">
+			            	<div class="page3tit">
+			            		<h3>{$content.title}</h3>
+			            	</div>
+						</a>
+					</li>
+					{/foreach} 
+
+					<!-- <li>
+						<a href="#">
+							<img src="images/page3list01.jpg" style="width: 100%;">
+			            	<div class="page3tit">
+			            		<h3>醒来又在吴中</h3>
+			            	</div>
+						</a>
+					</li>
+					-->	            	
+					
+	            </ul>
+	            <div id="pages" class="pages">{$multi}</div>
+
+			</div>
+		</div>
+		<div class="concopy">
+			<img src="{$path}/themes/0002/images/ewm.png">
+			<div class="copy">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+		</div>
+</body>
+</html>

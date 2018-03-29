@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{$siteConfig.sitetitle}</title>
+<meta name="keywords" content="{$siteConfig.sitekey}" />
+<meta name="description" content="{$siteConfig.sitedesc}" />
+
+<link rel="stylesheet" href="{$path}/themes/0002/css/jquery.fullPage.css">
+<link rel="stylesheet" href="{$path}/themes/0002/css/swiper.min.css">
+<link rel="stylesheet" href="{$path}/themes/0002/css/main.css">
+
+<script src="{$path}/themes/0002/js/jquery-1.8.3.min.js"></script>
+<script src="{$path}/themes/0002/js/jquery.fullPage.min.js"></script>
+<script src="{$path}/themes/0002/js/swiper.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		'navigation': true,
+		'verticalCentered':false,
+		'anchors':['page1','page2','page3','page4'],
+	});
+});
+</script>
+</head>
+<body>
+<style type="text/css">
+	.swiper0{z-index: -1;}
+	#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{background: #fff;}
+	#fp-nav ul li a span, .fp-slidesNav ul li a span{width: 10px;height:10px;border:2px solid #fff;}
+</style>
+<div id="dowebok">
+	<div class="section section1" style="background: none;">
+		<div class="swiper-container swiper0">
+	        <div class="swiper-wrapper">
+				{binbin focus label 1|0|5}
+	            <div class="swiper-slide"><img src="{$path}{$label.pic}" title="{$label.title}" alt="{$label.title}" style="width: 100%;height:100%;"></div>
+	            {/binbin}
+	        </div>
+	    </div>
+	    <script>
+		    var swiper = new Swiper('.swiper0', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+		        autoplay:2000,
+		        speed:1500,
+		    });
+		 </script>
+
+		<div class="topleft">
+			<h2 style="font-size: 36px;">TELEVISION</h2>
+			<h3>MEDIA</h3>
+			<p>高效/专业/品质</p>
+		</div>
+		<div class="rightlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="bottommenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		<div class="bottomright">
+			<div class="baxx">
+				<p>子翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+			<img src="{$path}/themes/0002/images/ewm.png">
+		</div>
+		<a href="#page2" class="nextpage"><span></span></a>
+	</div>
+	<div class="section section2">
+		<div class="topleft">
+			<h2 style="font-size: 36px;">ABOUT</h2>
+			<h3 style="font-family: '微软雅黑';">关于我们</h3>
+			<p>高效/专业/品质</p>
+		</div>
+		<div class="rightlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<ul class="page2con">
+			<li>
+				<div class="page2tit">
+					<h3>企业介绍</h3>
+					<p>about us</p>
+				</div>
+				<div class="page2desc">
+					<!-- <div class="qyjj">
+						贵州紫翼泓影视传媒有限公司（Gui Zhou ZYH Culture Media Co.,LTD.）是一家以企业宣传片、活动执行、网络大电影、城市宣传片、微电影等为主体的文化传媒及活动策划公司。紫翼泓致力于将企业人文文化与商业价值融为一体...
+					</div> -->
+					<div class="qyjjcon1">
+					</div>
+					<div class="qyjjcon2">
+						{insert name="categorys" categoryid="14"  key="seodesc" langth="false" nb2br="false"}
+					</div>
+				<span></span>
+				</div>
+			</li>
+			<li>
+				<div class="page2tit">
+					<h3>团队展示</h3>
+					<p>display team</p>
+				</div>
+				<div class="page2desc">
+					<div class="tdzscon1"></div>
+					<div class="tdzscon2">
+						{insert name="categorys" categoryid="15"  key="seodesc" langth="false" nb2br="false"}
+					</div>
+					<span></span>
+				</div>
+			</li>
+			<style type="text/css">
+				.ywfwcon1,.qyjjcon1,.tdzscon1,.yscon1{display: none;}
+				.constart{display: none;}
+				.conend{display: none;}
+			</style>
+			<script type="text/javascript">
+				$(function(){
+					$(".qyjjcon2").html($(".qyjjcon1 .indexpagecon").html());
+					$(".tdzscon2").html($(".tdzscon1 .indexpagecon").html());
+					$(".ywfwcon2").html($(".ywfwcon1 .indexpagecon").html());
+					$(".yscon2").html($(".yscon1 .indexpagecon").html());
+
+					$(".constart").css("display","none");
+					$(".conend").css("display","none");
+				});
+			</script>
+			<li>
+				<div class="page2tit">
+					<h3>业务范围</h3>
+					<p>Cooperation</p>
+				</div>
+				<div class="page2desc">
+					<div class="ywfwcon1"></div>
+					<div class="ywfwcon2">
+						{insert name="categorys" categoryid="16"  key="seodesc" langth="false" nb2br="false"}
+					</div>
+					<span></span>
+				</div>
+			</li>
+			<li>
+				<div class="page2tit">
+					<h3>优势</h3>
+					<p>news</p>
+				</div>
+				<div class="page2desc">
+					<div class="yscon1">
+					</div>
+					<div class="yscon2">
+						{insert name="categorys" categoryid="17"  key="seodesc" langth="false" nb2br="false"}
+					</div>
+				<span></span>
+				</div>
+			</li>
+		</ul>
+		<div class="bottommenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+
+		<div class="bottomright">
+			<div class="baxx">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+			<img src="{$path}/themes/0002/images/ewm.png">
+		</div>
+
+		
+		<a href="#page3" class="nextpage"><span></span></a>
+	</div>
+	<div class="section section3">
+		<div class="topleft">
+			<h2 style="font-size: 36px;">MOVIE</h2>
+			<h3 style="font-family: '微软雅黑';">影视制作</h3>
+			<p>高效/专业/品质</p>
+		</div>
+		<div class="rightlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="page3con">
+
+			<div class="swiper-container swiper1">
+		        <div class="swiper-wrapper">		
+				{binbin content case 18|0|20}
+		            <div class="swiper-slide">
+		            	<a href="{$path}{$case.url}">
+			            	<img src="{$path}{$case.thumb}" style="width: 100%;">
+			            	<div class="page3tit">
+			            		<h3>{$case.title}</h3>
+			            		<p>{$case.type_name}</p>
+			            	</div>
+		            	</a>
+		            </div>
+		         {/binbin} 
+
+
+
+		        </div>
+		        
+		    </div>
+		    <div class="swiper-button-next"></div>
+       		<div class="swiper-button-prev"></div>
+
+		    <script>
+		    var swiper = new Swiper('.swiper1', {
+		        nextButton: '.swiper-button-next',
+        		prevButton: '.swiper-button-prev',
+		        slidesPerView: 4,
+		        spaceBetween: 30
+		    });
+		    </script>
+		</div>
+		<div class="bottommenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		<div class="bottomright">
+			<div class="baxx">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+			<img src="{$path}/themes/0002/images/ewm.png">
+		</div>
+
+		<a href="#page4" class="nextpage"><span></span></a>
+
+	</div>
+	<div class="section section4">
+		<div class="topleft">
+			<h2 style="font-size: 36px;">CONTACT</h2>
+			<h3 style="font-family: '微软雅黑';">联系我们</h3>
+			<p>高效/专业/品质</p>
+		</div>
+		<div class="rightlogo">
+			<img src="{$path}/themes/0002/images/zhylogo.png">
+		</div>
+		<div class="page4con">
+			<div class="page4lxwm">
+				<div class="page4tit">
+					<h3>联系我们</h3>
+					<p>CONTACT</p>
+				</div>
+				<div class="page4lxwmcon">
+					<div class="gsdz">
+						<p><i></i><span>公司地址</span></p>
+						<p>{$siteConfig.address}</p>
+					</div>
+					<div class="otherinfo">
+						<p><i></i><span>{$siteConfig.mobile}</span></p>
+						<p><i></i><span>{$siteConfig.kftel}</span></p>
+						<p><i></i><span>{$siteConfig.qq}</span></p>
+						<p><i></i><span>{$siteConfig.kfemail}</span></p>
+						
+
+						<p><i></i><span>{$siteConfig.sitename}</span></p>
+
+						<div style="clear: both;"></div>
+					</div>
+					<div class="lxwmbtn">
+						<a href="#"><img src="{$path}/themes/0002/images/btn1.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="page4map">
+				<a href="http://j.map.baidu.com/j4j2O"><img src="{$path}/themes/0002/images/page4map.png"></a>
+			</div>
+			<div style="clear:both;"></div>
+			<style type="text/css">
+				.lxwmcon > div{height: 130px;overflow: hidden;}
+				.lxwmcon > div *{color:#fff;font-size: 16px;}
+			</style>
+			<div class="page4jrwm">
+				<div class="page4tit">
+					<h3>加入我们</h3>
+					<p>JOIN US</p>
+				</div>
+				<div class="lxwmcon">
+					<h3>招聘职位：</h3>
+					<div>
+						<!-- <p>1.模型师 美术造型基础强者优先。</p>
+						<p>2.动画师 熟悉运动规律，节奏感强者优先</p>
+						<p>3.特效师 有制作电影级别水，火，烟雾，爆炸特效模拟的经验优先。</p>
+						<p>4.包装师 有成熟影视剧片头片尾包装作品者优先</p>
+						<p>5.合成师 有院线特效电影合成经验者优先</p>
+						<p>6.调色师 有成熟电影调色作品者优先</p> -->
+						{insert name="categorys" categoryid="24"  key="desc" langth="false" nb2br="false"}
+					</div>
+					<div>
+						<a href='{$path}{insert name="categorys" categoryid="24"  key="url" langth="false" nb2br="false"}' class="xqbtn">详情</a>
+					</div>
+				</div>
+			</div>
+			<div class="page4zxly">
+				<div class="page4tit">
+					<h3>在线留言</h3>
+					<p>MESSAGE</p>
+				</div>
+				<div class="zxlycon">
+					<form class="page4form" action="" id="myform">
+						<input type="hidden" name="fid" value="1"/>
+					    <input type="hidden" name="formtime" id="formtime"/>
+						<div><input type="text" id="name" name="content[0]" placeholder="姓名(name)"></div>
+						<div><input type="text" id="tel" name="content[1]" placeholder="电话(Tel)"></div>
+						<div><input type="text" id="emill" name="content[2]" placeholder="邮箱(E-Mail)"></div>
+						<div><textarea id="message" name="content[3]" placeholder="留言内容(Message)"></textarea></div>
+						<div><input type="submit" value="提交"></div>
+					</form>
+				</div>
+				<SCRIPT type=text/javascript>
+					var timestamp = Date.parse(new Date())+500;
+					$("#formtime").attr("value",timestamp);
+
+					var verifyUrl='{$path}/include/verifycode.php';
+						function change_code(obj){
+							$("#code").attr("src",verifyUrl+'?'+Math.random());
+							return false;
+						}
+
+					$("#myform").submit(function(){
+						var name=$("#name").val();
+						var tel=$("#tel").val();
+						var emill=$("#emill").val();
+						var message=$("#message").val();
+						
+						// var yzm=$("#yzm").val();
+						if(name==""){
+							alert("请输入用户名");
+							return false;
+						}
+						if(tel==""){
+							alert("请输入电话");
+							return false;
+						}
+						if (emill=="") {
+							alert("请输入邮箱");
+							return false;
+						}
+						if (message=="") {
+							alert("请输入留言内容");
+							return false;
+						}
+
+						$.ajax({                
+						    type: "POST",                     
+						    url: "{$path}/form.php?action=savecontent",                  
+						    data: $('#myform').serialize(), 
+						    success: function(msg){
+						    	if ('OK'==msg){
+						    		alert('您的内容已经提交成功！');
+						    		document.location="{$path}/index.php";
+						    	}else{
+						      	alert(msg); 
+						      }           
+						    },
+						    error: function (xmlHttp, textStatus){
+						    	alert(textStatus);  
+						    }
+						  });
+					    return false;
+					});
+			</SCRIPT>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+
+
+		<div class="bottommenu">
+			<p><span>MENU</span></p>
+			{include file="menu.htm"}
+		</div>
+		<div class="bottomright">
+			<div class="baxx">
+				<p>紫翼泓<span>|</span>官方微信公众号</p>
+				{$siteConfig.copyright}
+			</div>
+			<img src="{$path}/themes/0002/images/ewm.png">
+		</div>
+
+		<a href="#page1" class="nextpage"><span style="transform: rotate(-135deg);top:8px;"></span></a>
+	</div>
+</div>
+<div class="xzh_go_to_top">
+	<div>顶部</div>
+	<a href="#page1">
+		<span style="transform: rotate(-135deg);top:8px;"></span>
+	</a>
+</div>
+<div class="xzh_qq">
+	<a href="http://sighttp.qq.com/msgrd?v=1&uin={$siteConfig.qq}">
+		<img src="{$path}/themes/0002/images/qq.svg" alt="">
+	</a>
+</div>
+</body>
+</html>

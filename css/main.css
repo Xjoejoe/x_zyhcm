@@ -1,0 +1,162 @@
+*{margin: 0px;padding: 0px;font-family: "Microsoft YaHei";}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+.section1 { background: url(../images/pag1bg.png) 50%;}
+.section2 { background: url(../images/page2bg.png) 50%;}
+.section3 { background: url(../images/page3bg.png) 50%;}
+.section4 { background: url(../images/page4bg.png) 50%;}
+/*.section5 { background: url(../images/aboutbg.png) no-repeat;background-size:cover;}*/
+
+.section{position: relative;}
+.topleft{position: absolute;top:40px;left: 35px;}
+.topleft h2,.topleft h3{color:#ffbc00;font-weight: normal;line-height: 1em;margin-top:0px;margin-bottom:0px;font-family: arial;}
+.topleft p{color:#d0964a;display: inline-block;border-top:1px solid #d0964a;padding-top: 5px;margin-top: 15px;}
+.rightlogo{position: absolute;top: 40px;right:35px;}
+.rightlogo img{height:60px;}
+.bottommenu > p,.bottommenu > ul{float: left;}
+.bottommenu{position: absolute;left: 35px;bottom: 50px;}
+.bottommenu ul{background-color: #ffbc00;}
+.bottommenu ul li{display:inline-block;padding: 10px 5px;}
+.bottommenu ul li:first-child{padding-left:10px;}
+.bottommenu ul li:last-child{padding-right:10px;}
+.bottommenu ul li a p{text-align: center;color:#28282a;font-family: "Microsoft YaHei";}
+.bottommenu ul li a p:last-of-type{font-size: 12px;}
+.bottommenu > p{height: 58px;box-sizing: border-box;width: 80px;line-height: 54px;text-align: center;border:1px solid #ffbc00;background-color: #28282a;margin-right: 2px;}
+.bottommenu > p span{color: #ffbc00;border-bottom: 2px solid #ffbc00;font-family: arial;}
+
+.bottomright{position: absolute;right:35px;bottom: 50px;}
+.bottomright .baxx{float: left;margin-right: 5px;}
+.bottomright .baxx p{color:#fff;font-family: "Microsoft YaHei";text-align: right;margin-bottom: 5px;font-size: 14px;}
+.bottomright .baxx p span{margin: 0px 10px;}
+.bottomright > img{float: right;border:3px solid #fff;height:74px;}
+
+.nextpage{display: inline-block;width: 60px;height: 30px;position: absolute;left: 50%;bottom: 20px;margin-left: -30px;border:1px solid #ffbc00;text-align: center;line-height: 30px;}
+.nextpage span{display: inline-block;width: 15px;height:15px;border-bottom: 2px solid #ffbc00;border-right: 2px solid #ffbc00;transform: rotate(45deg);position: relative;top: -3px;}
+
+.page2con{width: 1000px;height:450px;position: absolute;top:50%;left: 50%;margin-left: -500px;margin-top: -225px;}
+.page2con li{width: calc(100%/4 - 10px);float: left;background-color: #373739;
+	margin-right:calc(40px/3);color:#fff;padding: 20px;box-sizing: border-box;}
+.page2con li:last-child{margin-right: 0px;}
+.page2tit{padding-bottom: 10px;border-bottom: 2px solid #555557;text-align: right;position: relative;}
+.page2tit::after{content: "";display: block;height:40px;width: 0px;border-left: 2px solid #fff;float: right;position: absolute;right:10px;top:0px;transform: rotate(30deg);}
+.page2tit h3,.page2tit p{padding-right: 30px;}
+.page2tit p{font-family: arial;color: #aaa;}
+.page2desc{margin-top: 10px;font-size: 12px;}
+.page2desc > div {height:119px;overflow: hidden;}
+.page2desc span{display: block;width: 30px;height:3px;background-color: #cd9702;margin: 0px auto;margin-top: 10px;}
+
+
+.page3con{position: absolute;width: 1200px;height:440px;top:50%;left: 50%;margin-top: -220px;margin-left: -600px;}
+.swiper1{width: 1000px;}
+.swiper1 .swiper-wrapper{width: 800px;}
+.swiper1 .swiper-slide{font-size: 0px;}
+/*.swiper-button-next,.swiper-button-prev{color:#ffbc00;}*/
+.swiper-button-next{background-image:url(../images/nexticon.png);width: 51px;height:51px;background-size: 51px 51px;  }
+.swiper-button-prev{background-image:url(../images/previcon.png);width: 51px;height:51px;background-size: 51px 51px; }  
+/*.swiper-slide img{font-size: 0px;}*/
+.page3tit{height:110px;width: 100%;background-color: rgba(46,46,46,0.8);position: relative;text-align: center;}
+.page3tit::after{content: "";display: block;width: 24px;height:2px;background-color: #ffbc00;position: absolute;bottom: 18px;left: 50%;margin-left: -12px;}
+/*.page3tit *{font-family: "Microsoft YaHei";}*/
+.page3tit h3{color:#f0f0ff;font-size: 20px;position: absolute;top: 20px;left: 0px;width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.page3tit p{color:#aaa;position: absolute;width: 100%;bottom: 25px;left: 0px;font-size: 14px;}
+
+.page4con{position: absolute;top:50%;left: 50%;padding-left: 10px;width: 1100px;height:400px;margin-left: -550px;margin-top: -300px;}
+.page4tit{float: left;position: relative;}
+.page4tit::before{content: "";display: block;height:80px;width: 2px;background: #ffbc00;position: absolute;top:-35px;left: 0px;transform: rotate(45deg);}
+.page4tit h3{color:#cd9702;}
+.page4tit p{color:#aaa;font-size: 12px;}
+
+.page4lxwm{float: left;}
+.page4lxwm::after{content: "";display: block;height:0px;clear: both;}
+.page4lxwmcon{color:#fff;float: left;margin-left: 20px;}
+.page4lxwmcon .gsdz{margin-bottom: 10px;}
+.page4lxwmcon .gsdz >p:first-of-type::after{content: "";display: block;height:0px;clear: both;}
+.page4lxwmcon .gsdz >p:first-of-type i{float: left;display:block;width: 26px;height:26px;background: url(../images/page4icon1.png) no-repeat;}
+.page4lxwmcon .gsdz >p:first-of-type span{line-height: 26px;float: left;margin-left: 5px;}
+.page4lxwmcon .gsdz >p:last-of-type{text-indent: 32px;margin-top: 5px;}
+.page4lxwmcon .otherinfo{width: 400px;}
+.page4lxwmcon .otherinfo p{float: left;width: 150px;margin-top: 20px;}
+.page4lxwmcon .otherinfo p:nth-of-type(2n){width: 250px}
+.page4lxwmcon .otherinfo p::after{content: "";display: block;height:0px;clear: both;}
+.page4lxwmcon .otherinfo p i{display: block;width: 26px;height:26px;float: left;}
+.page4lxwmcon .otherinfo p span{line-height: 26px;float: left;margin-left: 5px;}
+.page4lxwmcon .otherinfo p:nth-of-type(1) i{background: url(../images/page4icon6.png) no-repeat;}
+.page4lxwmcon .otherinfo p:nth-of-type(2) i{background: url(../images/page4icon2.png) no-repeat;}
+
+.page4lxwmcon .otherinfo p:nth-of-type(4) i{background: url(../images/page4icon3.png) no-repeat;}
+.page4lxwmcon .otherinfo p:nth-of-type(3) i{background: url(../images/page4icon4.png) no-repeat;}
+
+.page4lxwmcon .otherinfo p:nth-of-type(5){width: 100%;}
+.page4lxwmcon .otherinfo p:nth-of-type(5) i{background: url(../images/page4icon5.png) no-repeat;}
+
+.page4map{float: right;}
+.page4map img{width:600px;}
+
+.page4jrwm{margin-top: 60px;float: left;}
+.page4zxly{margin-top: 60px;float: right;}
+.lxwmcon{float: left;margin-left: 20px;color:#f0f0ff;}
+.zxlycon{margin-left: 70px;float:left;}
+
+.lxwmcon .xqbtn{display: block;width: 75px;height:30px;line-height: 30px;text-align: center;background: #ffbc00;color:#fff;margin-top: 10px;}
+.lxwmbtn{margin-top: 15px;;}
+
+
+.page4form div{margin-bottom: 5px;}
+.page4form{position: relative;top:-40px;}
+.page4form::before{content: "";display: block;width: 50px;height:92px;background: url(../images/formico.png) no-repeat;position: absolute;top:12px;left: -50px;}
+.page4form div input[type='text'],.page4form div textarea{border:none;outline: none;background: #373739;padding: 3px;font-size: 12px;width: 200px;color:#fff;}
+.page4form div textarea{height:80px;}
+.page4form div input[type='submit']{border:none;outline: none;color:#fff;width:75px;height:30px;background: #ffbc00;cursor: pointer;}
+
+.xzh_go_to_top{
+	width: 50px;
+	height:50px;
+	position: fixed;
+	top:70%;
+	right: 1%;
+	color:#ffbc00;
+	 border:1px solid #ffbc00;
+	 text-align: center;
+}
+.xzh_go_to_top a{
+	display: block;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	color: #ffbc00;
+	text-align: center;
+	line-height: 30px;
+}
+.xzh_go_to_top span{
+	display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid #ffbc00;
+    border-right: 2px solid #ffbc00;
+    transform: rotate(45deg);
+    position: relative;
+    top: -3px;
+}
+.xzh_go_to_top:hover{
+	cursor:pointer;
+}
+.xzh_qq{
+	width:70px;
+	height:70px;
+	position: fixed;
+	top:30%;
+	right: 1%;
+}
+.xzh_qq a{
+	display: block;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	color: #ffbc00;
+	text-align: center;
+	line-height: 50px;
+}
+.xzh_qq:hover{
+	cursor:pointer;
+}
